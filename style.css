@@ -40,6 +40,7 @@ body {
 }
 
 #clear {
+    background-color: darkorange;
     font-size: larger;
     border-style: outset;
     border-radius: 15px;
@@ -50,6 +51,7 @@ body {
 }
 
 #delete {
+    background-color: red;
     font-size: larger;
     border-style: outset;
     border-radius: 15px;
@@ -73,6 +75,7 @@ body {
 }
 
 .numbers {
+    background-color: navajowhite;
     font-size: larger;
     height: 70px;
     width: 70px;
@@ -89,6 +92,7 @@ body {
 }
 
 .function {
+    background-color: rgb(189, 171, 12);
     font-size: larger;
     height: 70px;
     width: 70px;

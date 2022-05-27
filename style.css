@@ -83,6 +83,15 @@ body {
   border-radius: 15px;
 }
 
+#equals {
+  background-color: navajowhite;
+  font-size: larger;
+  height: 70px;
+  width: 70px;
+  border-style: outset;
+  border-radius: 15px;
+}
+
 #mathFunctions {
   display: flex;
   flex-wrap: wrap;

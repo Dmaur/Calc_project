@@ -4,12 +4,12 @@ let equals = document.getElementById("equals");
 let Del = document.getElementById("Del");
 let num = document.querySelectorAll(".numbers");
 
- num.forEach((number) => {
-    number.addEventListener(onmouseover, function () {
-      number.style.backgroundColor = "red"
-    });
-    // this does not work yet.
-})
+num.forEach((number) => {
+  number.addEventListener(onmouseover, function () {
+    number.style.backgroundColor = "red";
+  });
+  // this does not work yet.
+});
 
 //get the number input displayed.
 num.forEach((number) => {
@@ -53,6 +53,10 @@ equals.addEventListener("click", function () {
   console.log(equation);
   let equate = equation.join("");
   console.log(equate);
-  let answer = eval(equate);
-  display.innerHTML = answer;
+  let answer = Math.round(eval(equate)*100)/ 100;
+  if (answer == "Infinity") {
+    alert("you cant divide by zero dumb dumb");
+  } else {
+    display.innerHTML = answer;
+  }
 });

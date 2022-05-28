@@ -1,15 +1,26 @@
 let equation = [];
 let display = document.getElementById("display");
 let equals = document.getElementById("equals");
-
-// capture the number input
+let Del = document.getElementById("Del");
 let num = document.querySelectorAll(".numbers");
-// num.forEach((number) => {
-//   number.addEventListener(onmouseover, function () {});
-// }); // this does not work yet.
+
+ num.forEach((number) => {
+    number.addEventListener(onmouseover, function () {
+      number.style.backgroundColor = "red"
+    });
+    // this does not work yet.
+})
+
+//get the number input displayed.
 num.forEach((number) => {
   number.addEventListener("click", function () {
-    display.innerHTML += number.innerHTML;
+    if (display.innerHTML.length >= 12) {
+      alert(
+        "ayo, this is simple calculator. It has it's limits. 12 char is enough"
+      );
+    } else {
+      display.innerHTML += number.innerHTML;
+    }
   });
 });
 
@@ -29,32 +40,19 @@ numerators.forEach((numerator) => {
   });
 });
 
-// capture delete button input
-let Del = document.getElementById("Del");
+// deletes the last char entered
 Del.addEventListener("click", function () {
-  display.innerHTML = Del.innerHTML;
+  const popper = display.innerHTML.split("");
+  popper.pop();
+  display.innerHTML = popper.join("");
 });
 
 // handle equals and equation execution
 equals.addEventListener("click", function () {
-  equation.push(display.innerHTML)
+  equation.push(display.innerHTML);
   console.log(equation);
   let equate = equation.join("");
   console.log(equate);
   let answer = eval(equate);
-  display.innerHTML= answer
-
-  
+  display.innerHTML = answer;
 });
-// function add(a, b) {
-//   a + b;
-// }
-// function subtract(a, b) {
-//   a - b;
-// }
-// function divide(a, b) {
-//   a / b;
-// }
-// function multiply(a, b) {
-//   a * b;
-// }

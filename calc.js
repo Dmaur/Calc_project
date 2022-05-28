@@ -53,10 +53,11 @@ equals.addEventListener("click", function () {
   console.log(equation);
   let equate = equation.join("");
   console.log(equate);
-  let answer = Math.round(eval(equate)*100)/ 100;
+  let answer = Math.round(eval(equate) * 100) / 100;
   if (answer == "Infinity") {
     alert("you cant divide by zero dumb dumb");
   } else {
     display.innerHTML = answer;
+    equation = [];
   }
 });
